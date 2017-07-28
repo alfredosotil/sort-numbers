@@ -9,8 +9,35 @@ and open the template in the editor.
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Latest compiled and minified Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     </head>
     <body>
-        <div>TODO write content</div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-1 col-md-8 col-sm-offset-2">
+                    <h2>Ordenamiento de n&uacute;meros</h2>
+                    <form>
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <button id="clearList" class="btn btn-warning" type="button">Limpiar lista</button>
+                            </span>
+                            <input id="number" type="text" class="form-control" placeholder="Ingresa los n&uacute;meros separados por coma (,)" onkeypress='return event.charCode >= 48 && event.charCode <= 57 || event.keyCode === 44'>
+                            <span class="input-group-btn">
+                                <button id="addButton" class="btn btn-success" type="button">Agregar y ordenar!</button>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+
+            </div>  
+            <hr>
+            <h2 id="heading"></h2>
+            <ul id="orderedNumbers" class="list-group">
+            </ul>
+        </div>
     </body>
+    <script src="js/main.js" type="text/javascript"></script>
 </html>
